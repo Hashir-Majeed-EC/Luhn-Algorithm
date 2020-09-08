@@ -21,16 +21,14 @@ namespace Luhn_Algorithm
             {
                 if (i % 2 == 0)
                 {
-                    total += calc(Convert.ToInt32(creditCard[i]));
-                    Console.WriteLine(calc(Convert.ToInt32(creditCard[i])));
+                    total += calc(Convert.ToInt32(creditCard[i]) - 48);
                 }
                 else
                 {
-                    total += Convert.ToInt32(creditCard[i]);
-                    Console.WriteLine(Convert.ToInt32(creditCard[i]));
+                    total += Convert.ToInt32(creditCard[i] - 48);
                 }
             }
-            Console.WriteLine(total);
+
             if (total % 10 == 0)
             {
                 checksum = true;
